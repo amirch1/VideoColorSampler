@@ -1,37 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="color-thief.min.js"></script>
-	<script type="text/javascript" src="ntc.js"></script>
-	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/libs/color-thief.min.js"></script>
+	<script type="text/javascript" src="js/libs/ntc.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/color-sampler.js"></script>
+	<link href="./css/styles.css" rel="stylesheet">
 </head>
 <body>
 
-<video id="vid" src="http://cdnapi.kaltura.com/p/1645161/sp/164516100/playManifest/entryId/1_f6vsgr4d/flavorId/1_dd9zv983/format/url/protocol/http/a.mp4" crossOrigin ="anonymous" width="640" height="360" controls></video><br>
-<div id="output" style="width: 200px; height: 60px; font-family: Arial; font-size: 14px; border: 1px solid black; border-radius: 10px; text-align: center; padding-top:10px"></div>
+<video id="vid" src="http://cdnapi.kaltura.com/p/1645161/sp/164516100/playManifest/entryId/1_f6vsgr4d/flavorId/1_7qdjw94n/format/url/protocol/http/a.mp4" crossOrigin ="anonymous" width="640" height="360" controls></video><br>
 
-<script language="javascript">
-var colorThief = new ColorThief();
-var video = document.getElementById("vid");
-var intervalID;
+<div class="colorSamples">
+	<div class="colorSample color1"></div>
+	<div class="colorSample color2"></div>
+	<div class="colorSample color3"></div>
+</div>
 
-video.addEventListener("play", function() {
-	video.width = video.videoWidth;
-	video.height = video.videoHeight;
-	intervalID = setInterval(function(){
-		var frameColor = colorThief.getColor(video);
-		var hex = rgbToHex(frameColor[0],frameColor[1],frameColor[2]);
-		$("#output").html("<span style='font-size: 18px'>"+ntc.name(hex)[1]+"</span><br>("+hex+")").css("background-color","rgb("+frameColor+")");
-	},500);
-});
-video.addEventListener("pause", function() {
-	clearInterval(intervalID);
-});
-function rgbToHex(r, g, b) {
-    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-}
-
-</script>
 
 </body>
 </html>
