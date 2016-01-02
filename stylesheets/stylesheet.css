@@ -243,3 +243,43 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+
+video{
+  border: 1px solid black;
+  box-shadow: 3px 3px 1px rgba(0,0,0,0.7);
+}
+.colorSamples{
+  border: 1px solid black;
+  position: absolute;
+  width: 640px;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 1px rgba(0,0,0,0.7);
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.colorSamples .colorSample{
+  position: absolute;
+  display: inline-block;
+  width: 35%;
+  height: 20px;
+  padding-top: 2px;
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial;
+  text-shadow: 1px 1px #000000;
+  font-size: 14px;
+  text-align: center;
+}
+.colorSamples .color1{
+  z-index: 3;
+}
+.colorSamples .color2{
+  z-index: 2;
+  margin-left: 32%;
+}
+.colorSamples .color3{
+  z-index: 1;
+  margin-left: 65%;
+}
