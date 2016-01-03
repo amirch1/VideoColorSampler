@@ -266,6 +266,7 @@ video{
   display: inline-block;
   width: 35%;
   height: 20px;
+  padding-top: 2px;
   color: white;
   font-family: Helvetica Neue, Helvetica, Arial;
   text-shadow: 1px 1px #000000;
