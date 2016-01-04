@@ -27,7 +27,13 @@
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Real-time sampling of video color palette</h3>
 
 <p>This demo shows how to sample the current video frame color palette.<br>It uses <a href="https://github.com/lokesh/color-thief/" target="_blank">color-thief</a> to grab the current frame to a canvas and sample the colors.<br>It then uses the <a href="http://chir.ag/projects/ntc/" target="_blank">"Name that color"</a> library by Chirag Mehta to display the color name.<br>In this demo, 3 colors are sampled every 500ms but you can easily change these values.</p>
-
+<p><h3>A note about security</h3>
+    If you want to sample a video file from another domain, you need to verify the following:
+        <ul>
+            <li>Add the attribute <code>crossOrigin ="anonymous"</code> to your video tag</li>
+            <li>For some browsers you will also need to <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">set CORS headers</a> on your video files</li>
+        </ul>
+    </p>
 <h3><a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h3>
         <p>Click the "Play" button to start.</p>
 
