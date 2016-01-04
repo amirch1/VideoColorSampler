@@ -8,7 +8,7 @@ In this demo, 3 colors are sampled every 500ms but you can easily change these v
 ###A note about security
 If you want to sample a video file from another domain, you need to verify the following:
 * Add the attribute `crossOrigin ="anonymous"` to your video tag
-* For some browsers you will also need to add cross-domain headers to the server hosting your video file
+* For some browsers you will also need to [set CORS headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) on your video files
 
 # Demo
 http://amirch1.github.io/VideoColorSampler
